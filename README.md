@@ -8,11 +8,15 @@ The **Electronics Rental Website** is a user-friendly platform designed to facil
 - **Product Listings**: Comprehensive catalog of available electronic devices.
 - **Dynamic Shopping Cart**: Add or remove items easily, with real-time updates to totals.
 - **Checkout Process**: User-friendly checkout form with real-time validation and discount code application.
+- **Dynamic Charts**: Visual representation of rental trends using Chart.js.
 - **Responsive Design**: Mobile-friendly interface for users on any device.
+- **Icons for Enhancements**: Utilize Font Awesome for icons to improve user experience.
 - **Success Notifications**: Confirmation messages upon successful order placement.
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
+- **Charting Library**: [Chart.js](https://www.chartjs.org/) for dynamic charts
+- **Icons**: [Font Awesome](https://fontawesome.com/) for icons
 - **Backend**: Node.js (optional, if backend is implemented)
 - **Database**: MongoDB or any preferred database (optional)
 - **Version Control**: Git
