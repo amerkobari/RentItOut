@@ -2,9 +2,279 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rent Anything - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: left;
+
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 50%;
+            font-size: 1.2em;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .hero {
+            background: url('Imgs/bg.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff5a5f;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Filter Buttons Section */
+        .filters {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #f4f4f4;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+        .filter-btn:hover {
+            background-color: #ddd;
+        }
+        .filter-btn.active {
+            background-color: #ff5a5f;
+            color: white;
+        }
+
+        .categories {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .categories h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .category {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .category img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .how-it-works {
+            background-color: #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .how-it-works h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .steps {
+            display: flex;
+            justify-content: space-around;
+        }
+        .steps div {
+            width: 30%;
+            padding: 20px;
+        }
+        .cta-banner {
+            background-color: #ff5a5f;
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+        }
+        .cta-banner h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .cta-banner button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        header .logo:hover {
+            color: #ff5a5f;
+                    }
+    </style>
 </head>
 <body>
+
+<!-- Header -->
+<header>
+    <div class="logo">RentItOut</div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Sign In</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Search Bar -->
+<div class="search-bar">
+    <input type="text" placeholder="Search for items to rent...">
+    <button>Search</button>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Rent Anything, Anytime, Anywhere</h1>
+
+    <p>Explore the world of hassle-free rentals</p>
+    <button>Get Started</button>
+</section>
+
+<!-- Filter Buttons Section -->
+<section class="filters">
+    <h2>Popular Categories</h2>
+    <button class="filter-btn" data-category="electronics">Electronics</button>
+    <button class="filter-btn" data-category="furniture">Furniture</button>
+    <button class="filter-btn" data-category="vehicles">Vehicles</button>
+    <button class="filter-btn" data-category="tools">Tools</button>
+</section>
+
+
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div>
+            <h3>1. Search for Items</h3>
+            <p>Browse thousands of items in your area.</p>
+        </div>
+        <div>
+            <h3>2. Make a Request</h3>
+            <p>Choose your rental dates and submit your request.</p>
+        </div>
+        <div>
+            <h3>3. Enjoy & Return</h3>
+            <p>Pickup, use, and return with ease.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Banner -->
+<section class="cta-banner">
+    <h2>Have something to rent?</h2>
+    <button>List Your Item</button>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 RentAnything. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const categories = document.querySelectorAll('.category');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Hide all categories
+                categories.forEach(cat => cat.style.display = 'none');
+
+                // Show the selected category
+                categories.forEach(cat => {
+                    if (cat.getAttribute('data-category') === category) {
+                        cat.style.display = 'block';
+                    }
+                });
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
