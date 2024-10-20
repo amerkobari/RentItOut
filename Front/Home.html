@@ -22,7 +22,6 @@
             background-color: #333;
             color: white;
             text-align: left;
-
         }
         .logo {
             font-size: 1.5em;
@@ -172,7 +171,7 @@
         }
         header .logo:hover {
             color: #ff5a5f;
-                    }
+        }
     </style>
 </head>
 <body>
@@ -182,12 +181,11 @@
     <div class="logo">RentItOut</div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="Home.html">Home</a></li>
             <li><a href="#">Categories</a></li>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Sign In</a></li>
+            <li><a href="#howitworks" id="howItWorksLink">How It Works</a></li> <!-- Updated this line -->
+            <li><a href="#footer" id="contactLink">Contact Us</a></li>
+            <li><a href="SignIn.html">Sign In</a></li>
         </ul>
     </nav>
 </header>
@@ -200,10 +198,9 @@
 
 <!-- Hero Section -->
 <section class="hero">
-    <h1>Rent Anything, Anytime, Anywhere</h1>
-
-    <p>Explore the world of hassle-free rentals</p>
-    <button>Get Started</button>
+    <h1 style="text-shadow: 1px 1px 3px black">Rent Anything, Anytime, Anywhere</h1>
+    <p style="text-shadow: 1px 1px 3px black">Explore the world of hassle-free rentals</p>
+    <button style="border-radius: 5px">Get Started</button>
 </section>
 
 <!-- Filter Buttons Section -->
@@ -215,10 +212,8 @@
     <button class="filter-btn" data-category="tools">Tools</button>
 </section>
 
-
-
 <!-- How It Works Section -->
-<section class="how-it-works">
+<section id="howitworks" class="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">
         <div>
@@ -239,15 +234,77 @@
 <!-- Call-to-Action Banner -->
 <section class="cta-banner">
     <h2>Have something to rent?</h2>
-    <button>List Your Item</button>
+    <button style="border-radius: 5px">List Your Item</button>
 </section>
 
 <!-- Footer -->
-<footer>
-    <p>&copy; 2024 RentAnything. All rights reserved.</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+<footer id="footer" class="home-container8" style="background-color: #333; color: white; padding: 40px 20px;">
+    <div id="contact" style="width: 100%; max-width: 1200px; margin: 0 auto;">
+        <table width="100%" style="padding: 20px;">
+            <tbody>
+            <tr>
+                <td style="font-size: x-large; font-weight: bold; padding: 10px 0;">
+                    RENT IT OUT
+                </td>
+                <td class="Copyrightclass" style="padding: 10px 20px;">
+                    <div>
+                        <strong>Amer Kobari</strong><br>
+                        Email: <a href="mailto:amerkobari22@gmail.com" style="color: #ff5a5f;">amerkobari22@gmail.com</a><br>
+                        Phone: <a href="tel:+970599799230" style="color: #ff5a5f;">+970 599 799 230</a>
+                    </div>
+                    <br>
+                    <div>
+                        <strong>Tariq Marmash</strong><br>
+                        Email: <a href="mailto:tariqmarmash17@gmail.com" style="color: #ff5a5f;">tariqmarmash17@gmail.com</a><br>
+                        Phone: <a href="tel:+970592757780" style="color: #ff5a5f;">+970 592 757 780</a>
+                    </div>
+                    <br>
+                    <div>
+                        <strong>Sulaiman Kurdi</strong><br>
+                        Email: <a href="mailto:sulaimankurdi2909@gmail.com" style="color: #ff5a5f;">sulaimankurdi2909@gmail.com</a><br>
+                        Phone: <a href="tel:+972592529904" style="color: #ff5a5f;">+972 59-252-9904</a>
+                    </div>
+                </td>
+                <td align="center" width="25%" class="Copyrightclass" style="padding: 10px;">
+                    ©Copyright 2024.<br>
+                    All rights reserved. Amer, Tariq &amp; Sulaiman.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </footer>
 
+<style>
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        text-align: left;
+    }
+
+    footer a {
+        color: #ff5a5f;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        footer table {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        footer td {
+            display: block;
+            margin: 10px 0;
+        }
+    }
+</style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const filterButtons = document.querySelectorAll('.filter-btn');
@@ -271,6 +328,22 @@
                         cat.style.display = 'block';
                     }
                 });
+            });
+        });
+
+        // Smooth scroll to footer when "Contact Us" is clicked
+        document.getElementById('contactLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            document.getElementById('footer').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll to How It Works when clicked
+        document.getElementById('howItWorksLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            document.getElementById('howitworks').scrollIntoView({
+                behavior: 'smooth'
             });
         });
     });
