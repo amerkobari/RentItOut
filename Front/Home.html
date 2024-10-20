@@ -178,7 +178,7 @@
 
 <!-- Header -->
 <header>
-    <div class="logo">RentItOut</div>
+    <a href="Home.html" class="logo">RentItOut</a>
     <nav>
         <ul>
             <li><a href="Home.html">Home</a></li>
@@ -234,7 +234,7 @@
 <!-- Call-to-Action Banner -->
 <section class="cta-banner">
     <h2>Have something to rent?</h2>
-    <button style="border-radius: 5px">List Your Item</button>
+    <button onclick="window.location.href='NewItem.html'" style="border-radius: 5px">List Your Item</button>
 </section>
 
 <!-- Footer -->
@@ -303,6 +303,13 @@
             display: block;
             margin: 10px 0;
         }
+    }
+    header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        padding-left: 10px;
+        text-decoration: none;
+        color: white;
     }
 </style>
 <script>
