@@ -15,10 +15,9 @@ The **Electronics Rental Website** is a user-friendly platform designed to facil
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
-- **Charting Library**: [Chart.js](https://www.chartjs.org/) for dynamic charts
 - **Backend**: Node.js (optional, if backend is implemented)
 - **Database**: MySql or any preferred database (optional)
-- **Version Control**: Git
+- **Version Control**: GitHub 
 
 ## Installation
 1. **Clone the repository**:
